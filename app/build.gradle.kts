@@ -6,12 +6,12 @@ plugins {
 
 android {
     namespace = "com.palettex.syncstereo"
-    compileSdk = 35
+    compileSdk = 35 // TBC
 
     defaultConfig {
         applicationId = "com.palettex.syncstereo"
-        minSdk = 33
-        targetSdk = 35
+        minSdk = 33 // TBC
+        targetSdk = 35 // TBC
         versionCode = 1
         versionName = "1.0"
 
@@ -56,4 +56,11 @@ dependencies {
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
+    implementation("com.pierfrancescosoffritti.androidyoutubeplayer:core:11.1.0")
+
+    // Lifecycle dependencies
+    val lifecycleVersion = "2.7.0"
+    implementation("androidx.lifecycle:lifecycle-runtime-ktx:$lifecycleVersion")
+    implementation("androidx.lifecycle:lifecycle-viewmodel-compose:$lifecycleVersion")
+    implementation("androidx.lifecycle:lifecycle-runtime-compose:$lifecycleVersion")
 }
